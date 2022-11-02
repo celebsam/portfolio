@@ -1,0 +1,98 @@
+@import "../styles/variables.scss";
+
+.myWorksContainer {
+  background-image: url("/images/bk-art-alone.png");
+  background-position: top;
+
+  .myWorksCardContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 3rem;
+    .card {
+      border-radius: 18px;
+      background: #1d1d1d;
+      color: white;
+      box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+      // margin: 30px;
+      transform-style: preserve-3d;
+      transform: perspective(1000px);
+      img {
+        border-radius: 18px 18px 0 0;
+      }
+      .cardText {
+        transform: translateZ(30px);
+        padding: 0.2rem 1rem;
+        h3 {
+          font-size: 1.3rem;
+          text-align: center;
+          padding: 0.5rem 0;
+          margin-bottom: 0.8rem;
+        }
+        p {
+          font-size: clamp(0.9rem, 2vw, 1rem);
+          color: $paragraph-color;
+          line-height: 24px;
+          display: -moz-box;
+          display: -webkit-box;
+          -moz-line-clamp: 4;
+          -webkit-line-clamp: 4;
+          line-clamp: 4;
+          -moz-box-orient: vertical;
+          -webkit-box-orient: vertical;
+          box-orient: vertical;
+          overflow: hidden;
+        }
+      }
+      .btnContainer {
+        padding: 1.5rem 1rem;
+        display: flex;
+        justify-content: space-between;
+        button {
+          padding: 0.3rem 1rem 0.5rem;
+          border-radius: 1rem;
+          font-size: 1.1rem;
+          border: none;
+          font-weight: 500;
+          cursor: pointer;
+          background: #7741b9;
+          color: white;
+        }
+      }
+    }
+    .rgb::after {
+      content: "";
+      background: linear-gradient(
+          45deg,
+          #ff0000 0%,
+          #ff9a00 10%,
+          #d0de21 20%,
+          #4fdc4a 30%,
+          #3fdad8 40%,
+          #2fc9e2 50%,
+          #1c7fee 60%,
+          #5f15f2 70%,
+          #ba0cf8 80%,
+          #fb07d9 90%,
+          #ff0000 100%
+        )
+        repeat 0% 0% / 300% 100%;
+      position: absolute;
+      inset: -3px;
+      border-radius: 16px;
+      filter: blur(8px);
+      transform: translateZ(-1px);
+      animation: rgb 6s linear infinite;
+    }
+    @keyframes rgb {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+  }
+}

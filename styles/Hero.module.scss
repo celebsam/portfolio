@@ -1,0 +1,60 @@
+@import "../styles/variables.scss";
+
+.heroContainer {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 4rem 0 0;
+  background-image: url("/images/bk-art-alone.png");
+  background-position: right;
+  @media (min-width: 968px) {
+    background-position: center;
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .svg {
+    display: none;
+    @media (min-width: 968px) {
+      display: block;
+    }
+  }
+
+  .heroLeft {
+    margin: auto;
+    h1 {
+      font-size: clamp(2.2rem, 3.9vw, 6rem);
+      text-transform: capitalize;
+      text-align: center;
+      @media (min-width: 450px) {
+        text-align: left;
+      }
+    }
+    p {
+      margin: 1.5rem 0;
+      max-width: 800px;
+      font-size: clamp(1.1rem, 2vw, 1.3rem);
+      line-height: 34px;
+      font-weight: 400;
+      color: $paragraph-color;
+    }
+    button {
+      padding: 0.9rem 2rem;
+      border-radius: 2rem;
+      font-size: clamp(1.1rem, 2vw, 1.3rem);
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      background: $gradient-bg;
+      color: white;
+      transition: background 0.8s ease-in;
+      display: block;
+      margin: auto;
+      @media (min-width: 768px) {
+        margin: unset;
+      }
+      &:hover {
+        background: linear-gradient(270deg, #945dd6 0%, #13adc7 100%);
+      }
+    }
+  }
+}
