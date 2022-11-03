@@ -1,26 +1,31 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "../../styles/AboutMe.module.scss";
 import Image from "next/image";
+import Aos from "aos";
 
 const AboutMe = ({ aboutRef, scrollHandler }) => {
+  useEffect(() => {
+    Aos.init({ duration: 1900 });
+  }, []);
   return (
     <section className={styles.aboutMeContainer} ref={aboutRef}>
       <h2>About Me</h2>
       <div className={styles.aboutMeGrid}>
         <aside>
-          <div className={styles.imageContainer}>
-            <div className={styles.backgroundSlant}>
+          <div className={styles.imageContainer} data-aos="fade-up">
+            <div className={styles.backgroundSlant} data-aos="fade-right">
               <Image
                 src="/images/IMG_0830.jpeg"
                 width={900}
                 height={950}
                 alt="Samuel Green"
                 objectFit="cover"
+                data-aos="fade-right"
               />
             </div>
           </div>
         </aside>
-        <div className={styles.textContainer}>
+        <div className={styles.textContainer} data-aos="fade-up">
           <h3>Hello, I&#39;m Samuel,</h3>
           <p>
             I am a frontend developer with over 2 years of working experience.

@@ -1,14 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "../../styles/MyWorks.module.scss";
 import Image from "next/image";
 import Tilt from "react-parallax-tilt";
 import { projects } from "../../utils/data";
+import Aos from "aos";
 
 const MyWorks = ({ workRef }) => {
+  useEffect(() => {
+    Aos.init({ duration: 1200 });
+  }, []);
   return (
     <section className={styles.myWorksContainer} ref={workRef}>
       <h2>My Works</h2>
-      <div className={styles.myWorksCardContainer}>
+      <div className={styles.myWorksCardContainer} data-aos="fade-up">
         {projects.map((project) => (
           <Tilt key={project.id}>
             <div className={`${styles.card} ${styles.rgb}`}>

@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "../../styles/Hero.module.scss";
 
-const Hero = ({ homeRef }) => {
+const Hero = ({ homeRef, scrollHandler }) => {
   return (
     <section className={styles.heroContainer} ref={homeRef}>
       <div className={styles.heroLeft}>
@@ -13,7 +13,7 @@ const Hero = ({ homeRef }) => {
           Using mordern technologies. I create amazing websites, making sure
           they are user friendly, interactive and responsive.
         </p>
-        <button>View My Works</button>
+        <button onClick={() => scrollHandler("work")}>View My Works</button>
       </div>
       <div className={styles.svg}>
         <svg

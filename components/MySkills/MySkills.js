@@ -1,12 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "../../styles/MySkills.module.scss";
+import Aos from "aos";
 
 const MySkills = ({ skillRef }) => {
+  useEffect(() => {
+    Aos.init({ duration: 1200 });
+  }, []);
   return (
     <section className={styles.mySkillsContainer} ref={skillRef}>
       <h2>My Skills</h2>
+      {/* <p>
+        I create successful responsive websites that are fast, easy to use, and
+        built with best practices. The main area of my expertise is front-end
+        development, HTML, CSS, JS, building small and medium web apps, custom
+        plugins, features, animations, and coding interactive layouts.
+      </p> */}
       <div className={styles.mySkillsCardContainer}>
-        <div className={styles.frontend}>
+        <div className={styles.frontend} data-aos="fade-right">
           <h3>Frontend Development</h3>
           <ul>
             <li>
@@ -26,7 +36,7 @@ const MySkills = ({ skillRef }) => {
             </li>
           </ul>
         </div>
-        <div className={styles.backend}>
+        <div className={styles.backend} data-aos="fade-up">
           <h3>Backend Development</h3>
           <ul>
             <li>
