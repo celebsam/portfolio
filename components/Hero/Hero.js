@@ -7,10 +7,10 @@ const Hero = ({ homeRef, scrollHandler }) => {
       <div className={styles.heroLeft}>
         <h1>
           I&#39;m Samuel Ogbe-Green,
-          <br />I Create Beautiful web experiences
+          <br />I Create Beautiful Web Experiences
         </h1>
         <p>
-          Using mordern technologies. I create amazing websites, making sure
+          Using mordern web technologies, I create amazing websites, making sure
           they are user friendly, interactive and responsive.
         </p>
         <button onClick={() => scrollHandler("work")}>View My Works</button>

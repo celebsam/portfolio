@@ -50,11 +50,35 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Sam Green | Frontend Developer | Web Developer</title>
+        <title>
+          Samuel Green | Frontend Developer | Web Developer | React Developer
+        </title>
+        <meta
+          name="title"
+          content="Samuel Green | Frontend Developer | Web Developer | React Developer"
+        />
         <meta
           name="description"
-          content="Samuel Ogbe-Green portfolio website."
+          content="I am a frontend developer passionate about developing solutions using the best tools and best practices to deliver amazing UI's and UX. "
         />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="author" content="Samuel Ogbe-Green" />
+        <meta
+          name="keywords"
+          content="HTML, CSS, JavaScript, React, Frontend, Web Developer, portfolio, web development, front end development, React developer, frontend developer"
+        />
+        <meta name="robots" content="index, follow" />
+        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="language" content="English" />
+        <meta charset="UTF-8" />
+
+        {/* <meta property="og:type" content="article" />
+        <meta property="og:title" content="TITLE OF YOUR POST OR PAGE" />
+        <meta property="og:description" content="DESCRIPTION OF PAGE CONTENT" />
+        <meta property="og:image" content="LINK TO THE IMAGE FILE" />
+        <meta property="og:url" content="PERMALINK" />
+        <meta property="og:site_name" content="SITE NAME" /> */}
+
         <link
           rel="apple-touch-icon"
           sizes="180x180"

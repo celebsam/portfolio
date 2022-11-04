@@ -20,7 +20,7 @@ const MyWorks = ({ workRef }) => {
                 src={project.image}
                 width={600}
                 height={380}
-                alt="project"
+                alt={project.title}
                 objectFit="cover"
               />
               <div className={styles.cardText}>

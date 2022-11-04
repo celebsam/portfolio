@@ -18,7 +18,7 @@ const AboutMe = ({ aboutRef, scrollHandler }) => {
                 src="/images/IMG_0830.jpeg"
                 width={900}
                 height={950}
-                alt="Samuel Green"
+                alt="Samuel Ogbe-Green, a frontend web developer"
                 objectFit="cover"
                 data-aos="fade-right"
               />
@@ -28,12 +28,18 @@ const AboutMe = ({ aboutRef, scrollHandler }) => {
         <div className={styles.textContainer} data-aos="fade-up">
           <h3>Hello, I&#39;m Samuel,</h3>
           <p>
-            I am a frontend developer with over 2 years of working experience.
-            Coding has always been my passion. I bring lovely designs be it on
-            figma or any web design tool to live. I am mostly known on the
-            frontend but I can also role up my sleeves and get comfortable with
-            some backend codes, creating RESTful API&#39;s and storing
-            informations in mongoDB.
+            I am a frontend developer passionate about developing solutions
+            using the best tools and best practices to deliver amazing UI&#39;s
+            and UX. I am enthusiastic about UI effects, animations and designing
+            dynamic user experiences. I enjoy creating things that live on the
+            web and with every line of code I strive to make it a wonderful
+            experience.
+            <br />
+            <br />I bring lovely designs, be it on figma or any web design tool
+            to life. My main area of expertise is frontend development, HTML,
+            CSS, JavaScript, building small and medium web apps, but I can also
+            role up my sleeves and get comfortable with some backend codes,
+            creating RESTful API&#39;s and storing informations in mongoDB.
           </p>
           <div>
             <button onClick={() => scrollHandler("contact")}>Contact Me</button>

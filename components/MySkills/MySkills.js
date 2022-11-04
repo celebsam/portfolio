@@ -9,12 +9,6 @@ const MySkills = ({ skillRef }) => {
   return (
     <section className={styles.mySkillsContainer} ref={skillRef}>
       <h2>My Skills</h2>
-      {/* <p>
-        I create successful responsive websites that are fast, easy to use, and
-        built with best practices. The main area of my expertise is front-end
-        development, HTML, CSS, JS, building small and medium web apps, custom
-        plugins, features, animations, and coding interactive layouts.
-      </p> */}
       <div className={styles.mySkillsCardContainer}>
         <div className={styles.frontend} data-aos="fade-right">
           <h3>Frontend Development</h3>
