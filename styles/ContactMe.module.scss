@@ -13,7 +13,6 @@
     .socialsContainer {
       display: flex;
       flex-direction: column;
-      // justify-content: center;
       align-items: center;
       div {
         background: $secondary-dark;
@@ -120,7 +119,7 @@
           }
           &:focus ~ i,
           &:valid ~ i {
-            height: 93px;
+            height: 98px;
           }
         }
 
