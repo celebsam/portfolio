@@ -70,7 +70,7 @@ export default function Home() {
         <meta name="robots" content="index, follow" />
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="language" content="English" />
-        <meta charset="UTF-8" />
+        <meta charSet="UTF-8" />
 
         {/* <meta property="og:type" content="article" />
         <meta property="og:title" content="TITLE OF YOUR POST OR PAGE" />

@@ -28,8 +28,16 @@ const MyWorks = ({ workRef }) => {
                 <p>{project.description}</p>
               </div>
               <div className={styles.btnContainer}>
-                <button>source code</button>
-                <button>Demo</button>
+                {project.access === "private" ? (
+                  <button title="Sorry, this is a private repo.">Source</button>
+                ) : (
+                  <a href={project.source} target="_blank" rel="noreferrer">
+                    Source
+                  </a>
+                )}
+                <a href={project.visit} target="_blank" rel="noreferrer">
+                  Demo
+                </a>
               </div>
             </div>
           </Tilt>
