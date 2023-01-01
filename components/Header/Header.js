@@ -1,12 +1,69 @@
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import styles from "../../styles/Header.module.scss";
 
 const Header = ({ scrollHandler }) => {
+  const [showMenu, setshowMenu] = useState(false);
+
+  const showMenuHandler = () => {
+    setshowMenu(!showMenu);
+  };
   return (
     <>
       <header className={styles.headerWrapper}>
         <div className={styles.headerContainer}>
+          <div
+            className={`${styles.menuContainer} ${
+              !showMenu ? styles.active : ""
+            }`}
+          >
+            <ul className={styles.menuNavLinks}>
+              <li
+                onClick={() => {
+                  scrollHandler("home");
+                  showMenuHandler();
+                }}
+              >
+                {" "}
+                <p>Home</p>
+              </li>
+              <li
+                onClick={() => {
+                  scrollHandler("work");
+                  showMenuHandler();
+                }}
+              >
+                <p>My Works</p>
+              </li>
+              <li
+                onClick={() => {
+                  scrollHandler("skill");
+                  showMenuHandler();
+                }}
+              >
+                {" "}
+                <p>My Skills</p>
+              </li>
+              <li
+                onClick={() => {
+                  scrollHandler("about");
+                  showMenuHandler();
+                }}
+              >
+                {" "}
+                <p>About Me</p>
+              </li>
+              <li
+                className={styles.contact}
+                onClick={() => {
+                  scrollHandler("contact");
+                  showMenuHandler();
+                }}
+              >
+                <p>Contact Me</p>
+              </li>
+            </ul>{" "}
+          </div>
           <div>
             <Link href="/">
               <a className={styles.logoText}>
@@ -50,7 +107,7 @@ const Header = ({ scrollHandler }) => {
             >
               <i className="fab fa-linkedin"></i>{" "}
             </a>
-            <span className={styles.hamburger}>
+            <span className={styles.hamburger} onClick={showMenuHandler}>
               <i className="fas fa-bars"></i>
             </span>
           </div>

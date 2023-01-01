@@ -11,14 +11,64 @@
     width: 95%;
     margin: auto;
     padding: 1.4rem 0;
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
     @media (min-width: 768px) {
       width: 80%;
     }
+
+    .menuContainer {
+      display: block;
+      background: #0f1624;
+      position: absolute;
+      width: 100%;
+      top: 100%;
+      transition: all 0.4s ease-in-out;
+      z-index: 1000;
+
+      @media (min-width: 1100px) {
+        display: none;
+      }
+      .menuNavLinks {
+        @media (min-width: 1100px) {
+          display: flex;
+        }
+        li {
+          margin: 0 1.3rem 2rem;
+          list-style: none;
+          font-weight: 500;
+          transition: all 0.2s ease-in-out;
+          cursor: pointer;
+          -webkit-user-select: none;
+          user-select: none;
+          &:hover {
+            color: $primary;
+          }
+        }
+        .contact {
+          background: linear-gradient(270deg, #13adc7 0%, #945dd6 100%);
+          padding: 0.5rem 1rem;
+          border-radius: 2rem;
+          transition: all 0.2s ease-in-out;
+          max-width: 120px;
+          margin: 0 1.6rem 2rem 0.6rem;
+          &:hover {
+            background: linear-gradient(270deg, #945dd6 0%, #13adc7 100%);
+            color: white;
+          }
+        }
+      }
+    }
+    .active {
+      top: -500%;
+      opacity: 0;
+      transition: all 0.4s ease-in-out;
+    }
+
     .logoText {
-      font-size: 1.5rem;
+      font-size: clamp(1.3rem, 3vw, 1.5rem);
       color: $primary;
       font-weight: 600;
     }
