@@ -2,7 +2,7 @@ export const projects = [
   {
     title: "Garnet Care Foundation",
     description:
-      "A non-profit organization aimed at improving the lives of vulnerable females to survive financially, physically, emotionally and mentally, focusing on ensuring every woman and girl has the opportunity to improve their living conditions.",
+      "A non-profit organization aimed at improving the lives of vulnerable females to survive financially, physically and mentally, focusing on ensuring every woman and girl has the opportunity to improve their living conditions.",
     image: "/images/learnss.png",
     tags: ["Mongo", "Express", "React", "Node"],
     source: "https://garnetcare.org",
