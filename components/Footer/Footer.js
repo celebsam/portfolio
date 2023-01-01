@@ -24,7 +24,7 @@ const Footer = ({ scrollHandler }) => {
           <i className="fab fa-linkedin"></i>{" "}
         </a>
       </div>
-      <p>{new Date().getFullYear()}</p>
+      <p>&copy;{new Date().getFullYear()}</p>
     </footer>
   );
 };
