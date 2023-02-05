@@ -43,7 +43,7 @@ const AboutMe = ({ aboutRef, scrollHandler }) => {
           </p>
           <div>
             <button onClick={() => scrollHandler("contact")}>Contact Me</button>
-            <a href="/Sam Green CV 2022.pdf" download="Samuel Green CV">
+            <a href="/samuel_ogbe_green_CV_2023.pdf" download="Samuel Green CV">
               Download CV
             </a>
           </div>

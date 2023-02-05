@@ -108,7 +108,12 @@ const Header = ({ scrollHandler }) => {
               <i className="fab fa-linkedin"></i>{" "}
             </a>
             <span className={styles.hamburger} onClick={showMenuHandler}>
+              {showMenu ?               <i className="fas fa-bars"></i>
+ : 
               <i className="fas fa-bars"></i>
+
+
+}
             </span>
           </div>
         </div>

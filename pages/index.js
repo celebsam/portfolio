@@ -59,7 +59,7 @@ export default function Home() {
         />
         <meta
           name="description"
-          content="I am a frontend developer passionate about developing solutions using the best tools and best practices to deliver amazing UI's and UX. "
+          content="I am a frontend developer passionate about developing solutions using the best tools and best practices to deliver amazing UI's and UX."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="author" content="Samuel Ogbe-Green" />
@@ -72,12 +72,12 @@ export default function Home() {
         <meta name="language" content="English" />
         <meta charSet="UTF-8" />
 
-        {/* <meta property="og:type" content="article" />
-        <meta property="og:title" content="TITLE OF YOUR POST OR PAGE" />
-        <meta property="og:description" content="DESCRIPTION OF PAGE CONTENT" />
-        <meta property="og:image" content="LINK TO THE IMAGE FILE" />
-        <meta property="og:url" content="PERMALINK" />
-        <meta property="og:site_name" content="SITE NAME" /> */}
+        <meta property="og:type" content="portfolio website" />
+        <meta property="og:title" content="Samuel Green | Frontend Developer | Web Developer | React Developer" />
+        <meta property="og:description" content="I am a frontend developer passionate about developing solutions using the best tools and best practices to deliver amazing UI's and UX." />
+        <meta property="og:image" content="/ogimage.PNG" />
+        <meta property="og:url" content="https://samuel-green.vercel.app" />
+        <meta property="og:site_name" content="Samuel Ogbe-Green" />
 
         <link
           rel="apple-touch-icon"
