@@ -1,12 +1,12 @@
 export const projects = [
   {
-    title: "Garnet Care Foundation",
+    title: "Bidclover",
     description:
-      "A non-profit organization aimed at improving the lives of vulnerable females to survive financially, physically and mentally, focusing on ensuring every woman and girl has the opportunity to improve their living conditions.",
-    image: "/images/learnss.PNG",
-    tags: ["Mongo", "Express", "React", "Node"],
-    source: "https://garnetcare.org",
-    visit: "https://garnetcare.org",
+      "A bidding platform that allows users to compete for various amazing products",
+    image: "/images/clover.png",
+    tags: ["Next", "React"],
+    source: "https://bidclover.com",
+    visit: "https://bidclover.com",
     access: "private",
     type: "website",
     id: 1,

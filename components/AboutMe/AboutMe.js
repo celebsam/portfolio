@@ -20,7 +20,7 @@ const AboutMe = ({ aboutRef, scrollHandler }) => {
                 height={950}
                 alt="Samuel Ogbe-Green, a frontend web developer"
                 objectFit="cover"
-                data-aos="fade-right"
+                data-aos="fade-down"
               />
             </div>
           </div>
@@ -38,12 +38,15 @@ const AboutMe = ({ aboutRef, scrollHandler }) => {
             <br />I bring lovely designs, be it on figma or any web design tool
             to life. My main area of expertise is frontend development, HTML,
             CSS, JavaScript, building small and medium web apps, but I can also
-            role up my sleeves and get comfortable with some backend codes,
+            roll up my sleeves and get comfortable with some backend codes,
             creating RESTful API&#39;s and storing informations in mongoDB.
           </p>
           <div>
             <button onClick={() => scrollHandler("contact")}>Contact Me</button>
-            <a href="/samuel_ogbe_green_CV_2023.pdf" download="Samuel Green CV">
+            <a
+              href="/Uruemuesiri_Samuel_Ogbe_Green_2024.pdf"
+              download="Samuel Green CV"
+            >
               Download CV
             </a>
           </div>
