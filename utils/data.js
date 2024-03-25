@@ -2,7 +2,7 @@ export const projects = [
   {
     title: "Bidclover",
     description:
-      "A bidding platform that allows users to compete for various amazing products",
+      "A bidding platform that allows users to compete for various amazing products.",
     image: "/images/clover.png",
     tags: ["Next", "React"],
     source: "https://bidclover.com",
