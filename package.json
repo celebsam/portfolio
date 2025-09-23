@@ -12,14 +12,17 @@
     "@emailjs/browser": "^3.9.0",
     "aos": "^3.0.0-beta.6",
     "next": "12.2.0",
-    "node-sass": "^8.0.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-hot-toast": "^2.4.0",
-    "react-parallax-tilt": "^1.7.68"
+    "react-parallax-tilt": "^1.7.68",
+    "sass": "^1.93.1"
   },
   "devDependencies": {
     "eslint": "8.18.0",
     "eslint-config-next": "12.2.0"
+  },
+  "engines": {
+    "node": "22.x"
   }
 }

@@ -23,6 +23,9 @@ const MySkills = ({ skillRef }) => {
               <i className="fa fa-check-circle"></i> JavaScript
             </li>
             <li>
+              <i className="fa fa-check-circle"></i> TypeScript
+            </li>
+            <li>
               <i className="fa fa-check-circle"></i> React / Next JS
             </li>
             <li>
