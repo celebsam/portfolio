@@ -73,8 +73,14 @@ export default function Home() {
         <meta charSet="UTF-8" />
 
         <meta property="og:type" content="portfolio website" />
-        <meta property="og:title" content="Samuel Green | Frontend Developer | Web Developer | React Developer" />
-        <meta property="og:description" content="I am a frontend developer passionate about developing solutions using the best tools and best practices to deliver amazing UI's and UX." />
+        <meta
+          property="og:title"
+          content="Samuel Green | Frontend Developer | Web Developer | React Developer"
+        />
+        <meta
+          property="og:description"
+          content="I am a frontend developer passionate about developing solutions using the best tools and best practices to deliver amazing UI's and UX."
+        />
         <meta property="og:image" content="/ogimage.PNG" />
         <meta property="og:url" content="https://samuel-green.vercel.app" />
         <meta property="og:site_name" content="Samuel Ogbe-Green" />
@@ -98,7 +104,8 @@ export default function Home() {
         />
         <link rel="manifest" href="/site.webmanifest"></link>
       </Head>
-      <Toaster />
+      <Toaster position="bottom-center" reverseOrder={false} />
+
       <div className={styles.wrapper}>
         <Header scrollHandler={scrollHandler} />
 

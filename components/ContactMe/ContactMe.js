@@ -15,7 +15,7 @@ const ContactMe = ({ contactRef }) => {
 
     emailjs
       .sendForm(
-        "service_ntqz7go",
+        "service_vadehqp",
         "template_4vrjglh",
         form.current,
         "gIC6NPRXchz6Fvu1w"
@@ -28,6 +28,7 @@ const ContactMe = ({ contactRef }) => {
         },
         (error) => {
           setLoading(false);
+          console.log(error);
           toast.error(error.text);
         }
       );
