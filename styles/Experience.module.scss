@@ -1,0 +1,233 @@
+@import "../styles/variables.scss";
+
+.experienceContainer {
+  background-image: url("/images/bk-art-alone.png");
+  background-position: top;
+
+  .timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1rem 0 2rem;
+
+    // Vertical centre line — visible on desktop only
+    .timelineLine {
+      display: none;
+
+      @media (min-width: 768px) {
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 2px;
+        background: linear-gradient(
+          to bottom,
+          transparent,
+          rgba(148, 93, 214, 0.5) 10%,
+          rgba(19, 173, 199, 0.5) 90%,
+          transparent
+        );
+      }
+    }
+  }
+
+  .timelineItem {
+    position: relative;
+    width: 100%;
+    margin-bottom: 2rem;
+
+    @media (min-width: 768px) {
+      width: 47%;
+      margin-bottom: 3rem;
+
+      &.left {
+        align-self: flex-start;
+        margin-right: auto;
+        padding-right: 2rem;
+      }
+
+      &.right {
+        align-self: flex-end;
+        margin-left: auto;
+        padding-left: 2rem;
+      }
+    }
+  }
+
+  // Desktop timeline uses flex column so we need the parent to be positioned
+  .timeline {
+    @media (min-width: 768px) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  // Dot on the centre line
+  .timelineDot {
+    display: none;
+
+    @media (min-width: 768px) {
+      display: block;
+      position: absolute;
+      top: 1.8rem;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: $gradient-bg;
+      border: 2px solid #0f1624;
+      z-index: 1;
+
+      .left & {
+        right: -7px;
+        transform: translateX(50%);
+      }
+
+      .right & {
+        left: -7px;
+        transform: translateX(-50%);
+      }
+    }
+  }
+
+  .card {
+    background: rgba(57, 29, 90, 0.35);
+    border: 1px solid rgba(148, 93, 214, 0.2);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+
+    &:hover {
+      border-color: rgba(148, 93, 214, 0.5);
+      transform: translateY(-3px);
+    }
+
+    .cardHeader {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      margin-bottom: 1.1rem;
+
+      @media (min-width: 500px) {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+
+      .role {
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: white;
+        margin-bottom: 0.25rem;
+      }
+
+      .company {
+        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.7);
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 0.3rem;
+
+        span:first-child {
+          font-weight: 600;
+          background: $gradient-bg;
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+
+        .separator {
+          color: rgba(255, 255, 255, 0.3);
+          -webkit-text-fill-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .type {
+          font-size: 0.8rem;
+          padding: 0.1rem 0.55rem;
+          border-radius: 2rem;
+          background: rgba(19, 173, 199, 0.1);
+          border: 1px solid rgba(19, 173, 199, 0.25);
+          color: $primary;
+          -webkit-text-fill-color: $primary;
+        }
+      }
+
+      .meta {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.25rem;
+        flex-shrink: 0;
+
+        @media (min-width: 500px) {
+          align-items: flex-end;
+        }
+
+        .period {
+          font-size: 0.82rem;
+          font-weight: 600;
+          color: rgba(255, 255, 255, 0.55);
+          white-space: nowrap;
+        }
+
+        .location {
+          font-size: 0.78rem;
+          color: rgba(255, 255, 255, 0.45);
+          white-space: nowrap;
+
+          i {
+            margin-right: 0.25rem;
+            color: $primary;
+          }
+        }
+      }
+    }
+
+    .bullets {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 1rem;
+
+      li {
+        position: relative;
+        padding-left: 1.2rem;
+        margin-bottom: 0.55rem;
+        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.72);
+        line-height: 1.7;
+
+        &::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 0.65rem;
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          background: $gradient-bg;
+          flex-shrink: 0;
+        }
+      }
+    }
+
+    .tagsRow {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.5rem;
+
+      .tag {
+        font-size: 0.72rem;
+        font-weight: 600;
+        padding: 0.2rem 0.6rem;
+        border-radius: 2rem;
+        background: rgba(148, 93, 214, 0.1);
+        border: 1px solid rgba(148, 93, 214, 0.3);
+        color: $secondary;
+        letter-spacing: 0.3px;
+      }
+    }
+  }
+}

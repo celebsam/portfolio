@@ -4,9 +4,12 @@
   width: 100%;
   display: grid;
   grid-template-columns: 1fr;
-  padding: 4rem 0 0;
+  padding: 5rem 0 2rem;
   background-image: url("/images/bk-art-alone.png");
   background-position: right;
+  min-height: 85vh;
+  align-items: center;
+
   @media (min-width: 968px) {
     background-position: center;
     grid-template-columns: 2fr 1fr;
@@ -21,40 +24,120 @@
 
   .heroLeft {
     margin: auto;
+    max-width: 700px;
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.4rem 1rem;
+      border-radius: 2rem;
+      border: 1px solid rgba(19, 173, 199, 0.4);
+      background: rgba(19, 173, 199, 0.08);
+      color: $primary;
+      font-size: 0.85rem;
+      font-weight: 500;
+      margin-bottom: 1.2rem;
+      letter-spacing: 0.5px;
+
+      &::before {
+        content: "";
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: $primary;
+        animation: pulse 2s infinite;
+      }
+    }
+
     h1 {
-      font-size: clamp(2.2rem, 3.9vw, 6rem);
+      font-size: clamp(2rem, 3.9vw, 3.6rem);
       text-transform: capitalize;
       text-align: center;
+      line-height: 1.2;
+      margin-bottom: 0.6rem;
+
       @media (min-width: 450px) {
         text-align: left;
       }
     }
-    p {
-      margin: 1.5rem 0;
-      max-width: 800px;
-      font-size: clamp(1.1rem, 2vw, 1.3rem);
-      line-height: 34px;
-      font-weight: 400;
-      color: $paragraph-color;
-    }
-    button {
-      padding: 0.9rem 2rem;
-      border-radius: 2rem;
-      font-size: clamp(1.1rem, 2vw, 1.3rem);
-      font-weight: bold;
-      border: none;
-      cursor: pointer;
-      background: $gradient-bg;
-      color: white;
-      transition: background 0.8s ease-in;
-      display: block;
-      margin: auto;
-      @media (min-width: 768px) {
-        margin: unset;
+
+    .typedWrapper {
+      margin-bottom: 1.2rem;
+      min-height: 2.2rem;
+      text-align: center;
+
+      @media (min-width: 450px) {
+        text-align: left;
       }
-      &:hover {
-        background: linear-gradient(270deg, #945dd6 0%, #13adc7 100%);
+    }
+
+    .typedText {
+      font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+      font-weight: 600;
+      background: $gradient-bg;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    p {
+      margin: 1rem 0 2rem;
+      max-width: 600px;
+      font-size: clamp(1rem, 1.8vw, 1.15rem);
+      line-height: 1.8;
+      font-weight: 400;
+      color: rgba(255, 255, 255, 0.65);
+      text-align: center;
+
+      @media (min-width: 450px) {
+        text-align: left;
+      }
+    }
+
+    .ctaGroup {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      @media (min-width: 450px) {
+        justify-content: flex-start;
+      }
+
+      button {
+        padding: 0.85rem 2rem;
+        border-radius: 2rem;
+        font-size: clamp(0.95rem, 1.6vw, 1.1rem);
+        font-weight: 600;
+        border: none;
+        cursor: pointer;
+        background: $gradient-bg;
+        color: white;
+        transition: opacity 0.3s ease, transform 0.2s ease;
+
+        &:hover {
+          opacity: 0.85;
+          transform: translateY(-2px);
+        }
+      }
+
+      .outlineBtn {
+        background: transparent;
+        border: 2px solid rgba(148, 93, 214, 0.6);
+        color: white;
+
+        &:hover {
+          border-color: $secondary;
+          background: rgba(148, 93, 214, 0.12);
+          opacity: 1;
+        }
       }
     }
   }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.8); }
 }

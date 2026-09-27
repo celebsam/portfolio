@@ -2,108 +2,100 @@ import Head from "next/head";
 import { useRef } from "react";
 import AboutMe from "../components/AboutMe/AboutMe";
 import ContactMe from "../components/ContactMe/ContactMe";
+import Experience from "../components/Experience/Experience";
 import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
 import Hero from "../components/Hero/Hero";
 import MySkills from "../components/MySkills/MySkills";
 import MyWorks from "../components/MyWorks/MyWorks";
 import SectionDivider from "../components/SectionDivider/SectionDivider";
+import Testimonials from "../components/Testimonials/Testimonials";
 import styles from "../styles/Home.module.scss";
 import "aos/dist/aos.css";
 import { Toaster } from "react-hot-toast";
 
 export default function Home() {
   const homeRef = useRef(null);
+  const experienceRef = useRef(null);
   const workRef = useRef(null);
   const skillRef = useRef(null);
   const aboutRef = useRef(null);
   const contactRef = useRef(null);
 
   const scrollHandler = (section) => {
-    if (section === "home") {
+    const offset = 83;
+    const refs = {
+      home: homeRef,
+      experience: experienceRef,
+      work: workRef,
+      skill: skillRef,
+      about: aboutRef,
+      contact: contactRef,
+    };
+
+    const ref = refs[section];
+    if (ref?.current) {
       window.scrollTo({
-        top: homeRef.current.offsetTop - 83,
-        behavior: "smooth",
-      });
-    } else if (section === "work") {
-      window.scrollTo({
-        top: workRef.current.offsetTop - 83,
-        behavior: "smooth",
-      });
-    } else if (section === "skill") {
-      window.scrollTo({
-        top: skillRef.current.offsetTop - 83,
-        behavior: "smooth",
-      });
-    } else if (section === "about") {
-      window.scrollTo({
-        top: aboutRef.current.offsetTop - 83,
-        behavior: "smooth",
-      });
-    } else if (section === "contact") {
-      window.scrollTo({
-        top: contactRef.current.offsetTop - 83,
+        top: ref.current.offsetTop - offset,
         behavior: "smooth",
       });
     }
   };
+
   return (
     <>
       <Head>
-        <title>
-          Samuel Green | Frontend Developer | Web Developer | React Developer
-        </title>
+        <title>Samuel Ogbe-Green | Senior Frontend Engineer | React &amp; Next.js Developer</title>
         <meta
           name="title"
-          content="Samuel Green | Frontend Developer | Web Developer | React Developer"
+          content="Samuel Ogbe-Green | Senior Frontend Engineer | React & Next.js Developer"
         />
         <meta
           name="description"
-          content="I am a frontend developer passionate about developing solutions using the best tools and best practices to deliver amazing UI's and UX."
+          content="Senior Frontend Engineer with 4+ years of experience building fast, accessible, and scalable web and mobile applications using React, Next.js, and TypeScript."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="author" content="Samuel Ogbe-Green" />
+        <meta name="author" content="Uruemuesiri Samuel Ogbe-Green" />
         <meta
           name="keywords"
-          content="HTML, CSS, JavaScript, React, Frontend, Web Developer, portfolio, web development, front end development, React developer, frontend developer"
+          content="Samuel Ogbe-Green, Senior Frontend Engineer, React Developer, Next.js Developer, TypeScript, React Native, Frontend Developer, Web Developer, JavaScript, Portfolio, UI Engineer, Nigeria"
         />
         <meta name="robots" content="index, follow" />
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="language" content="English" />
         <meta charSet="UTF-8" />
 
-        <meta property="og:type" content="portfolio website" />
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
         <meta
           property="og:title"
-          content="Samuel Green | Frontend Developer | Web Developer | React Developer"
+          content="Samuel Ogbe-Green | Senior Frontend Engineer | React & Next.js Developer"
         />
         <meta
           property="og:description"
-          content="I am a frontend developer passionate about developing solutions using the best tools and best practices to deliver amazing UI's and UX."
+          content="Senior Frontend Engineer with 4+ years of experience building fast, accessible, and scalable web and mobile applications using React, Next.js, and TypeScript."
         />
         <meta property="og:image" content="/ogimage.PNG" />
         <meta property="og:url" content="https://samuel-green.vercel.app" />
-        <meta property="og:site_name" content="Samuel Ogbe-Green" />
+        <meta property="og:site_name" content="Samuel Ogbe-Green Portfolio" />
 
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="/apple-touch-icon.png"
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Samuel Ogbe-Green | Senior Frontend Engineer" />
+        <meta
+          name="twitter:description"
+          content="Senior Frontend Engineer with 4+ years of experience in React, Next.js, TypeScript, and React Native."
         />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href="/favicon-32x32.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href="/favicon-16x16.png"
-        />
-        <link rel="manifest" href="/site.webmanifest"></link>
+        <meta name="twitter:image" content="/ogimage.PNG" />
+
+        {/* Favicons */}
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+
       </Head>
+
       <Toaster position="bottom-center" reverseOrder={false} />
 
       <div className={styles.wrapper}>
@@ -112,14 +104,19 @@ export default function Home() {
         <main className={styles.main}>
           <Hero homeRef={homeRef} scrollHandler={scrollHandler} />
           <SectionDivider />
+          <Experience experienceRef={experienceRef} />
+          <SectionDivider />
           <MyWorks workRef={workRef} />
           <SectionDivider />
           <MySkills skillRef={skillRef} />
           <SectionDivider />
           <AboutMe aboutRef={aboutRef} scrollHandler={scrollHandler} />
           <SectionDivider />
+          <Testimonials />
+          <SectionDivider />
           <ContactMe contactRef={contactRef} />
         </main>
+
         <Footer scrollHandler={scrollHandler} />
       </div>
     </>

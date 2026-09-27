@@ -16,6 +16,7 @@
     "react-dom": "18.2.0",
     "react-hot-toast": "^2.4.0",
     "react-parallax-tilt": "^1.7.68",
+    "react-type-animation": "^3.2.0",
     "sass": "^1.93.1"
   },
   "devDependencies": {

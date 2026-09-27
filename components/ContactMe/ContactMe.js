@@ -4,9 +4,43 @@ import Aos from "aos";
 import emailjs from "@emailjs/browser";
 import toast from "react-hot-toast";
 
+const socials = [
+  {
+    icon: "fas fa-envelope",
+    label: "Email",
+    value: "samuelogbe0@gmail.com",
+    sub: "Send a message",
+    href: "mailto:samuelogbe0@gmail.com",
+    external: false,
+  },
+  {
+    icon: "fab fa-linkedin",
+    label: "LinkedIn",
+    value: "samuel-ogbe-green",
+    sub: "Connect with me",
+    href: "https://linkedin.com/in/samuel-ogbe-green",
+    external: true,
+  },
+  {
+    icon: "fab fa-github",
+    label: "GitHub",
+    value: "github.com/celebsam",
+    sub: "Check my code",
+    href: "https://github.com/celebsam",
+    external: true,
+  },
+  {
+    icon: "fab fa-whatsapp",
+    label: "WhatsApp",
+    value: "+234 706 397 9371",
+    sub: "Send a message",
+    href: "https://wa.me/2347063979371",
+    external: true,
+  },
+];
+
 const ContactMe = ({ contactRef }) => {
   const [loading, setLoading] = useState(false);
-
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -41,29 +75,29 @@ const ContactMe = ({ contactRef }) => {
   return (
     <section className={styles.contactMeContainer} ref={contactRef}>
       <h2>Contact Me</h2>
+      <p className={styles.subHeading}>
+        I&#39;m open to new roles, freelance projects, and collaborations.
+        Let&#39;s build something great together.
+      </p>
+
       <div className={styles.contactMeGrid}>
         <div className={styles.socialsContainer}>
-          <div data-aos="fade-up">
-            <a href="mailto:samuelogbe0@gmail.com">
-              <i className="fas fa-envelope"></i>
-              <p>Email</p>
-              <p>samuelogbe0@gmail.com</p>
-              <small>Send a message</small>
-            </a>
-          </div>
-          <div data-aos="fade-down">
-            <a
-              href="https://wa.me/2347063979371"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <i className="fab fa-whatsapp"></i>
-              <p>WhatsApp</p>
-              <p>+2347063979371</p>
-              <small>Send a message</small>
-            </a>
-          </div>
+          {socials.map((s, i) => (
+            <div key={s.label} data-aos={i % 2 === 0 ? "fade-up" : "fade-down"}>
+              <a
+                href={s.href}
+                target={s.external ? "_blank" : undefined}
+                rel={s.external ? "noreferrer" : undefined}
+              >
+                <i className={s.icon}></i>
+                <p>{s.label}</p>
+                <p>{s.value}</p>
+                <small>{s.sub}</small>
+              </a>
+            </div>
+          ))}
         </div>
+
         <div className={styles.formBox} data-aos="fade-up">
           <form ref={form} onSubmit={sendEmail}>
             <div className={styles.inputContainer}>
@@ -99,7 +133,7 @@ const ContactMe = ({ contactRef }) => {
               <i></i>
             </div>
             <button disabled={loading}>
-              {loading ? "Loading..." : "Submit"}
+              {loading ? "Sending..." : "Send Message"}
             </button>
           </form>
         </div>
