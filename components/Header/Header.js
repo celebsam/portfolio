@@ -21,6 +21,7 @@ const Header = ({ scrollHandler }) => {
 
   const navLinks = [
     { label: "Home", section: "home" },
+    { label: "Capabilities", section: "impact" },
     { label: "Experience", section: "experience" },
     { label: "Projects", section: "work" },
     { label: "Skills", section: "skill" },

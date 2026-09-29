@@ -1,227 +1,154 @@
-@import "../styles/variables.scss";
+@import "./variables";
 
 .contactMeContainer {
-  background-image: url("/images/bk-art-alone.png");
-  background-position: top;
-
-  .subHeading {
-    text-align: center;
-    color: rgba(255, 255, 255, 0.6);
-    font-size: 1rem;
-    max-width: 520px;
-    margin: -1rem auto 2.5rem;
-    line-height: 1.7;
-  }
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
 
   .contactMeGrid {
     display: grid;
-    grid-template-columns: 1fr;
-    @media (min-width: 768px) {
-      grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    margin-top: 2rem;
+
+    @media (max-width: 868px) {
+      grid-template-columns: 1fr;
     }
+  }
 
-    .socialsContainer {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      align-items: stretch;
+  .socialsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
 
-      div {
-        background: rgba(57, 29, 90, 0.5);
-        border: 1px solid rgba(148, 93, 214, 0.2);
-        width: 100%;
-        text-align: center;
-        font-weight: 500;
-        border-radius: 0.75rem;
-        transition: border-color 0.3s ease, transform 0.3s ease;
+    .socialCard {
+      background: #131c31;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
+      padding: 1.25rem;
+      transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 
-        &:hover {
-          border-color: rgba(148, 93, 214, 0.5);
-          transform: translateY(-3px);
-        }
-
-        a {
-          display: block;
-          padding: 1.4rem 1rem;
-          color: inherit;
-          text-decoration: none;
-        }
-
-        i {
-          font-size: 1.5rem;
-          background: linear-gradient(270deg, #13adc7 0%, #945dd6 100%);
-          background-clip: text;
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          display: block;
-          margin-bottom: 0.4rem;
-        }
-
-        p {
-          margin-bottom: 0.2rem;
-          &:first-of-type {
-            font-weight: 700;
-            color: white;
-          }
-          &:last-of-type {
-            font-size: 0.85rem;
-            color: rgba(255,255,255,0.65);
-          }
-        }
-
-        small {
-          font-size: 0.75rem;
-          color: rgba(19, 173, 199, 0.8);
-        }
+      &:hover {
+        transform: translateY(-3px);
+        border-color: rgba(19, 173, 199, 0.4);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
       }
-    }
 
-    .formBox {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      background: #1c1c1c;
-      border-radius: 8px;
-      overflow: hidden;
+      a {
+        display: flex;
+        align-items: center;
+        gap: 1.25rem;
+        color: inherit;
+        text-decoration: none;
+      }
 
-      form {
-        width: 99.2%;
-        height: 99.2%;
-        position: relative;
-        inset: 2px;
-        background: #28292d;
-        border-radius: 8px;
-        z-index: 10;
-        padding: 35px 20px 20px 20px;
+      .iconBox {
+        width: 48px;
+        height: 48px;
+        border-radius: 12px;
+        background: rgba(19, 173, 199, 0.1);
+        border: 1px solid rgba(19, 173, 199, 0.25);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #38bdf8;
+        font-size: 1.35rem;
+        flex-shrink: 0;
+      }
+
+      .cardInfo {
         display: flex;
         flex-direction: column;
-        @media (min-width: 768px) {
-          padding: 40px;
-          width: 99.05%;
-        }
-        @media (min-width: 1008px) {
-          width: 99.5%;
-        }
-        .inputContainer {
-          position: relative;
-          width: 100%;
-          margin-bottom: 2.5rem;
-        }
-        input {
-          width: 100%;
-          position: relative;
-          background: transparent;
-          padding: 0.6rem 0.6rem;
-          color: #23242a;
-          border: none;
-          font-size: 1rem;
-          outline: none;
-          z-index: 10;
-          &:focus ~ span,
-          &:valid ~ span {
-            color: $primary;
-            transform: translateY(-30px);
-            font-size: 0.9rem;
-          }
-          &:focus ~ i,
-          &:valid ~ i {
-            height: 38px;
-          }
-        }
-        .email {
-          &:not(:focus) {
-            padding-left: 3rem;
-          }
-          &:valid {
-            padding-left: 0.6rem;
-          }
+
+        .label {
+          font-size: 0.8rem;
+          color: #94a3b8;
+          font-weight: 500;
         }
 
-        textarea {
-          width: 100%;
-          position: relative;
-          background: transparent;
-          padding: 0.6rem 0.6rem;
-          color: #23242a;
-          border: none;
+        .val {
           font-size: 1rem;
-          outline: none;
-          z-index: 10;
-          resize: none;
-          &:focus ~ span,
-          &:valid ~ span {
-            color: $primary;
-            transform: translateY(-30px);
-            font-size: 0.9rem;
-          }
-          &:focus ~ i,
-          &:valid ~ i {
-            height: 98px;
-          }
+          font-weight: 700;
+          color: #ffffff;
+          margin: 0.15rem 0;
         }
 
-        span {
-          position: absolute;
-          left: 0;
-          padding: 0.6rem 0;
-          color: #8f8f8f;
-          pointer-events: none;
-          transition: all 0.5s ease-in-out;
-          font-weight: bold;
-        }
-        i {
-          position: absolute;
-          left: 0;
-          bottom: 0;
-          width: 100%;
-          height: 2px;
-          background: $primary;
-          border-radius: 4px;
-          transition: all 0.5s ease;
-          pointer-events: none;
-          z-index: 9;
+        .sub {
+          font-size: 0.78rem;
+          color: #38bdf8;
+          font-weight: 600;
         }
       }
-      button {
-        padding: 10px 0;
-        cursor: pointer;
-        background: $primary;
-        border-radius: 0.4rem;
-        border: none;
-        font-size: 1rem;
-        font-weight: bold;
-        color: rgb(236, 235, 235);
+    }
+  }
+
+  .formBox {
+    background: #131c31;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.6);
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .inputGroup {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+
+      label {
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: #cbd5e1;
       }
-      &::before {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: -50%;
-        left: -50%;
-        transform-origin: bottom right;
-        background: (linear-gradient(0deg, transparent, $primary, $primary));
-        animation: animate 6s linear infinite;
-      }
-      &::after {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: -50%;
-        left: -50%;
-        transform-origin: bottom right;
-        background: (linear-gradient(0deg, transparent, $primary, $primary));
-        animation: animate 6s linear infinite;
-        animation-delay: -3s;
-      }
-      @keyframes animate {
-        0% {
-          transform: rotate(0deg);
+
+      input, textarea {
+        background: rgba(11, 15, 25, 0.7);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        padding: 0.75rem 1rem;
+        color: #ffffff;
+        font-size: 0.95rem;
+        outline: none;
+        transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+        &:focus {
+          border-color: #13adc7;
+          box-shadow: 0 0 10px rgba(19, 173, 199, 0.25);
         }
-        100% {
-          transform: rotate(360deg);
-        }
+      }
+
+      textarea {
+        resize: vertical;
+        min-height: 110px;
+      }
+    }
+
+    .submitBtn {
+      background: linear-gradient(135deg, #13adc7 0%, #945dd6 100%);
+      color: #ffffff;
+      border: none;
+      padding: 0.85rem;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      margin-top: 0.5rem;
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 25px rgba(19, 173, 199, 0.4);
+      }
+
+      &:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+        transform: none;
       }
     }
   }

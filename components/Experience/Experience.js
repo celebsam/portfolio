@@ -5,12 +5,16 @@ import Aos from "aos";
 
 const Experience = ({ experienceRef }) => {
   useEffect(() => {
-    Aos.init({ duration: 1200 });
+    Aos.init({ duration: 1000 });
   }, []);
 
   return (
     <section className={styles.experienceContainer} ref={experienceRef}>
-      <h2>Experience</h2>
+      <h2>Professional Experience</h2>
+      <p className="sectionSubtitle">
+        A track record of building performant web &amp; mobile apps, migrating legacy stacks, and optimizing Core Web Vitals.
+      </p>
+
       <div className={styles.timeline}>
         {experiences.map((exp, index) => (
           <div
@@ -23,20 +27,13 @@ const Experience = ({ experienceRef }) => {
             <div className={styles.timelineDot} />
             <div className={styles.card}>
               <div className={styles.cardHeader}>
-                <div>
-                  <h3 className={styles.role}>{exp.role}</h3>
-                  <p className={styles.company}>
-                    <span>{exp.company}</span>
-                    <span className={styles.separator}>·</span>
-                    <span className={styles.type}>{exp.type}</span>
-                  </p>
+                <h3 className={styles.role}>{exp.role}</h3>
+                <div className={styles.company}>
+                  <span>{exp.company}</span>
+                  <span className={styles.separator}>·</span>
+                  <span className={styles.location}>📍 {exp.location}</span>
                 </div>
-                <div className={styles.meta}>
-                  <span className={styles.period}>{exp.period}</span>
-                  <span className={styles.location}>
-                    <i className="fas fa-map-marker-alt"></i> {exp.location}
-                  </span>
-                </div>
+                <span className={styles.periodBadge}>{exp.period}</span>
               </div>
               <ul className={styles.bullets}>
                 {exp.bullets.map((bullet, i) => (
@@ -53,7 +50,6 @@ const Experience = ({ experienceRef }) => {
             </div>
           </div>
         ))}
-        <div className={styles.timelineLine} />
       </div>
     </section>
   );
