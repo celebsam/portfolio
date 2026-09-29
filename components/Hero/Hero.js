@@ -79,8 +79,8 @@ const Hero = ({ homeRef, scrollHandler }) => {
             <Image
               src="/images/IMG_0830.jpeg"
               alt="Uruemuesiri Samuel Ogbe-Green"
-              width={350}
-              height={350}
+              width={450}
+              height={450}
               priority
             />
           </div>
