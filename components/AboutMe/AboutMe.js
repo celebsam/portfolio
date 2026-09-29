@@ -36,23 +36,17 @@ const AboutMe = ({ aboutRef, scrollHandler }) => {
         <div className={styles.textContainer} data-aos="fade-up">
           <h3>Hello, I&#39;m Samuel,</h3>
           <p>
-            I&#39;m a Senior Frontend Engineer with 4+ years of professional
-            experience building scalable, high-performance web and mobile
-            applications. I specialise in React, Next.js, and TypeScript,
-            crafting interfaces that are fast, accessible, and a pleasure to use.
+            I&#39;m a Senior Frontend Engineer with 4+ years of experience
+            building scalable, high-performance web and mobile applications. I
+            specialise in React, Next.js, and TypeScript — crafting interfaces
+            that are fast, accessible, and a genuine pleasure to use.
           </p>
           <p>
             I&#39;ve shipped production-grade products across e-commerce,
-            logistics, and fintech — working in cross-functional teams where I
-            own the frontend architecture, lead code reviews, and mentor junior
-            developers. I care deeply about clean code, component design, and
-            the details that separate a good product from a great one.
-          </p>
-          <p>
-            Outside of React, I&#39;m comfortable in React Native for mobile,
-            can hold my own on the backend with Node.js and MongoDB, and I bring
-            designs from Figma to pixel-perfect life. I believe great UI
-            engineering is where technical rigour meets empathy for the user.
+            logistics, and fintech, owning frontend architecture, leading code
+            reviews, and mentoring junior developers. I bring Figma designs to
+            pixel-perfect life and can hold my own on the backend with Node.js
+            and MongoDB when needed.
           </p>
 
           <div className={styles.statsRow} data-aos="fade-up">
