@@ -1,7 +1,8 @@
 @import "./variables";
 
 .experienceContainer {
-  max-width: 1100px;
+  max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
   padding: 4rem 1.5rem;
 
@@ -16,7 +17,7 @@
       bottom: 0;
       left: 50%;
       width: 2px;
-      background: linear-gradient(180deg, #13adc7 0%, #945dd6 50%, rgba(148, 93, 214, 0.1) 100%);
+      background: linear-gradient(180deg, #13adc7 0%, #945dd6 50%, rgba(148, 93, 214, 0.05) 100%);
       transform: translateX(-50%);
 
       @media (max-width: 768px) {
@@ -33,6 +34,7 @@
     @media (max-width: 768px) {
       width: 100%;
       padding-left: 50px;
+      left: 0 !important;
     }
 
     &.left {
@@ -40,7 +42,6 @@
       padding-right: 40px;
 
       @media (max-width: 768px) {
-        left: 0;
         padding-right: 0;
       }
     }
@@ -63,8 +64,9 @@
       border-radius: 50%;
       background: #13adc7;
       border: 3px solid #0b0f19;
-      box-shadow: 0 0 12px #13adc7;
+      box-shadow: 0 0 15px #13adc7, 0 0 30px rgba(19, 173, 199, 0.3);
       z-index: 2;
+      animation: dotPulse 3s ease-in-out infinite;
 
       @media (max-width: 768px) {
         left: 13px !important;
@@ -80,16 +82,17 @@
     }
 
     .card {
-      background: #131c31;
-      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: linear-gradient(145deg, #131c31 0%, #0f172a 100%);
+      border: 1px solid rgba(255, 255, 255, 0.06);
       border-radius: 18px;
       padding: 1.75rem;
       box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.5);
-      transition: transform 0.3s ease, border-color 0.3s ease;
+      transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 
       &:hover {
         transform: translateY(-4px);
         border-color: rgba(19, 173, 199, 0.35);
+        box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.6), 0 0 20px rgba(19, 173, 199, 0.08);
       }
 
       .cardHeader {
@@ -131,8 +134,8 @@
           font-size: 0.78rem;
           font-weight: 700;
           color: #c084fc;
-          background: rgba(148, 93, 214, 0.12);
-          border: 1px solid rgba(148, 93, 214, 0.3);
+          background: rgba(148, 93, 214, 0.1);
+          border: 1px solid rgba(148, 93, 214, 0.25);
           padding: 0.25rem 0.65rem;
           border-radius: 9999px;
           margin-top: 0.2rem;
@@ -152,6 +155,7 @@
           color: #94a3b8;
           font-size: 0.9rem;
           line-height: 1.55;
+          transition: color 0.2s ease;
 
           &::before {
             content: "▹";
@@ -160,6 +164,10 @@
             color: #13adc7;
             font-size: 1rem;
             font-weight: 700;
+          }
+
+          &:hover {
+            color: #cbd5e1;
           }
         }
       }
@@ -174,11 +182,23 @@
           font-weight: 600;
           padding: 0.25rem 0.65rem;
           border-radius: 6px;
-          background: rgba(255, 255, 255, 0.04);
+          background: rgba(255, 255, 255, 0.03);
           color: #cbd5e1;
-          border: 1px solid rgba(255, 255, 255, 0.08);
+          border: 1px solid rgba(255, 255, 255, 0.06);
+          transition: all 0.2s ease;
+
+          &:hover {
+            background: rgba(56, 189, 248, 0.08);
+            border-color: rgba(56, 189, 248, 0.2);
+            color: #38bdf8;
+          }
         }
       }
     }
   }
+}
+
+@keyframes dotPulse {
+  0%, 100% { box-shadow: 0 0 15px #13adc7, 0 0 30px rgba(19, 173, 199, 0.3); }
+  50% { box-shadow: 0 0 20px #13adc7, 0 0 50px rgba(19, 173, 199, 0.4); }
 }

@@ -6,9 +6,10 @@
   margin-top: 4rem;
 
   .footerInner {
-    width: 85%;
+    max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
-    padding: 3rem 0 2rem;
+    padding: 3rem 1.5rem 2rem;
     display: grid;
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -89,7 +90,9 @@
   .footerBottom {
     border-top: 1px solid rgba(255, 255, 255, 0.06);
     text-align: center;
-    padding: 1.2rem 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.2rem 1.5rem;
 
     p {
       font-size: 0.8rem;

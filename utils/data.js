@@ -45,7 +45,7 @@ export const engineeringPillars = [
     icon: "📱",
     title: "Cross-Platform Mobile Engineering",
     description:
-      "Shipped production mobile applications on iOS App Store & Google Play Store using React Native, with offline-first synchronization, push notifications, and Google Maps integration.",
+      "Shipped production mobile applications on iOS App Store & Google Play Store using React Native.",
     highlights: ["React Native", "Google Maps API", "App Store & Play Store", "Offline Sync"],
   },
   {
@@ -113,52 +113,52 @@ export const projects = [
       metrics: ["Shipped to Google Play", "Location Autocomplete", "Offline Support"],
     },
   },
-  {
-    id: 3,
-    title: "Sam Shop Platform",
-    subtitle: "Full-Stack MERN E-Commerce Storefront",
-    category: "web",
-    description:
-      "A full-stack e-commerce web application featuring user authentication via JWT, cart state management, product filtering, and a comprehensive admin dashboard for order processing.",
-    image: "/images/samshopss.PNG",
-    tags: ["React", "Node.js", "Express.js", "MongoDB", "JWT"],
-    source: "https://github.com/celebsam/mern-shopping-cart",
-    visit: "https://github.com/celebsam/mern-shopping-cart",
-    access: "public",
-    type: "website",
-    caseStudy: {
-      role: "Full Stack Engineer",
-      timeline: "2022",
-      problem:
-        "Building a reliable end-to-end e-commerce platform to demonstrate RESTful API integration, JWT session management, and admin state management.",
-      solution:
-        "Designed and implemented REST APIs with Express & MongoDB, paired with a React SPA featuring client-side routing, protected routes, and interactive cart controls.",
-      metrics: ["REST API Endpoints", "JWT Auth", "Admin Control Panel"],
-    },
-  },
+  // {
+  //   id: 3,
+  //   title: "Sam Shop Platform",
+  //   subtitle: "Full-Stack MERN E-Commerce Storefront",
+  //   category: "web",
+  //   description:
+  //     "A full-stack e-commerce web application featuring user authentication via JWT, cart state management, product filtering, and a comprehensive admin dashboard for order processing.",
+  //   image: "/images/samshopss.PNG",
+  //   tags: ["React", "Node.js", "Express.js", "MongoDB", "JWT"],
+  //   source: "https://github.com/celebsam/mern-shopping-cart",
+  //   visit: "https://github.com/celebsam/mern-shopping-cart",
+  //   access: "public",
+  //   type: "website",
+  //   caseStudy: {
+  //     role: "Full Stack Engineer",
+  //     timeline: "2022",
+  //     problem:
+  //       "Building a reliable end-to-end e-commerce platform to demonstrate RESTful API integration, JWT session management, and admin state management.",
+  //     solution:
+  //       "Designed and implemented REST APIs with Express & MongoDB, paired with a React SPA featuring client-side routing, protected routes, and interactive cart controls.",
+  //     metrics: ["REST API Endpoints", "JWT Auth", "Admin Control Panel"],
+  //   },
+  // },
   {
     id: 4,
-    title: "Custom WordPress & Enterprise Clients",
-    subtitle: "35+ Performance-Optimized Client Websites",
+    title: "Cork-Dorx",
+    subtitle: "Custom WordPress Culinary & Tasting Experience Platform",
     category: "wordpress",
     description:
-      "Suite of 35+ custom WordPress websites engineered for clients across e-commerce, SaaS, and professional services. Built with custom themes, plugins, SCF, and WooCommerce extensions.",
-    image: "/images/samgreen.png",
-    tags: ["WordPress", "PHP", "Custom Plugins", "WooCommerce", "SEO", "SCF"],
-    source: "https://github.com/celebsam",
-    visit: "https://samuel-green.vercel.app",
+      "Custom WordPress website engineered for Cork-DoRx, a luxury culinary pairings and wine tasting platform. Built with bespoke themes, interactive tasting experience showcases, direct booking flows, and responsive design optimized for speed and SEO.",
+    image: "/images/cork-dorx.png",
+    tags: ["WordPress", "PHP", "Custom Theme", "WooCommerce", "SEO", "Responsive Design"],
+    source: "https://cork-dorx.com",
+    visit: "https://cork-dorx.com",
     access: "private",
     type: "website",
     caseStudy: {
-      role: "WordPress & Frontend Developer",
-      timeline: "2020 – Present",
+      role: "WordPress Developer & Designer",
+      timeline: "2023 – 2024",
       problem:
-        "Clients needed pixel-perfect Figma design conversions into custom WordPress sites with fast load speeds, secure code, and automated content workflows.",
+        "Cork-DoRx needed a sophisticated web platform to showcase curated wine & culinary pairing experiences and drive direct tasting reservations.",
       solution:
-        "Built custom themes and plugins from scratch using clean PHP, SCF, and WooCommerce extensions, reducing client page load times by 35–50% and achieving 90+ PageSpeed scores.",
-      metrics: ["35+ Live Websites", "35-50% Load Time Cut", "90+ PageSpeed"],
+        "Designed and engineered a custom WordPress platform featuring responsive hero sliders, intuitive tasting inquiry forms, image optimization for fast mobile loading, and local SEO.",
+      metrics: ["Sub-2s Page Load", "Custom WordPress Theme", "Tasting Reservation Flow"],
     },
-  },
+  }
 ];
 
 export const experiences = [
@@ -211,7 +211,7 @@ export const skillsGrouped = [
       { name: "React Native", level: "Advanced", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
       { name: "TypeScript", level: "Advanced", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
       { name: "JavaScript (ES6+)", level: "Expert", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
-      { name: "Tailwind CSS", level: "Advanced", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" },
+      { name: "Tailwind CSS", level: "Advanced", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" },
       { name: "HTML5 / CSS3 / SASS", level: "Expert", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" },
     ],
   },

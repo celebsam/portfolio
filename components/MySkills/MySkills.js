@@ -32,7 +32,15 @@ const MySkills = ({ skillRef }) => {
                 <div key={skill.name} className={styles.skillChip}>
                   <div className={styles.left}>
                     {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src={skill.icon} alt={skill.name} width={20} height={20} />
+                    <img
+                      src={skill.icon}
+                      alt={skill.name}
+                      width={20}
+                      height={20}
+                      onError={(e) => {
+                        e.currentTarget.style.opacity = '0';
+                      }}
+                    />
                     <span>{skill.name}</span>
                   </div>
                   <span className={styles.levelBadge}>{skill.level}</span>

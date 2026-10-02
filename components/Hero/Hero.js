@@ -50,12 +50,6 @@ const Hero = ({ homeRef, scrollHandler }) => {
             Explore My Works
           </button>
           <button
-            className={styles.outlineBtn}
-            onClick={() => scrollHandler("contact")}
-          >
-            Hire Me
-          </button>
-          <button
             className={styles.resumeBtn}
             onClick={() => setIsResumeOpen(true)}
           >

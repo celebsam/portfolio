@@ -1,6 +1,10 @@
 @import "./variables.scss";
 
 .testimonialsContainer {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
   background-image: url("/images/bk-art-alone.png");
   background-position: top;
 

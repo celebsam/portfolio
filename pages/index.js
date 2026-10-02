@@ -136,13 +136,13 @@ export default function Home() {
         <main className={styles.main}>
           <Hero homeRef={homeRef} scrollHandler={scrollHandler} />
           <SectionDivider />
+          <MyWorks workRef={workRef} />
+          <SectionDivider />
           <div ref={impactRef}>
             <EngineeringImpact />
           </div>
           <SectionDivider />
           <Experience experienceRef={experienceRef} />
-          <SectionDivider />
-          <MyWorks workRef={workRef} />
           <SectionDivider />
           <MySkills skillRef={skillRef} />
           <SectionDivider />
