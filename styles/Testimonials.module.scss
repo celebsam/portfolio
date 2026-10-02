@@ -1,0 +1,117 @@
+@import "./variables.scss";
+
+.testimonialsContainer {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+  background-image: url("/images/bk-art-alone.png");
+  background-position: top;
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+
+    @media (min-width: 640px) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media (min-width: 1024px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .card {
+    background: rgba(57, 29, 90, 0.35);
+    border: 1px solid rgba(148, 93, 214, 0.2);
+    border-radius: 1rem;
+    padding: 2rem 1.6rem 1.6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    position: relative;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+
+    &:hover {
+      border-color: rgba(148, 93, 214, 0.5);
+      transform: translateY(-4px);
+    }
+
+    .quoteIcon {
+      position: absolute;
+      top: -0.1rem;
+      left: 1.2rem;
+      font-size: 5rem;
+      line-height: 1;
+      background: $gradient-bg;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      opacity: 0.35;
+      font-family: Georgia, serif;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    .quote {
+      font-size: 0.92rem;
+      line-height: 1.8;
+      color: rgba(255, 255, 255, 0.72);
+      font-style: italic;
+      flex: 1;
+      position: relative;
+      z-index: 1;
+    }
+
+    .author {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      border-top: 1px solid rgba(148, 93, 214, 0.15);
+      padding-top: 1rem;
+
+      .avatar {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        background: $gradient-bg;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        overflow: hidden;
+
+        span {
+          font-size: 0.85rem;
+          font-weight: 700;
+          color: white;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .authorInfo {
+        display: flex;
+        flex-direction: column;
+        gap: 0.15rem;
+
+        strong {
+          font-size: 0.9rem;
+          color: white;
+          font-weight: 600;
+        }
+
+        span {
+          font-size: 0.78rem;
+          color: $primary;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}

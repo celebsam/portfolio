@@ -1,52 +1,54 @@
 import React, { useEffect } from "react";
 import styles from "../../styles/MySkills.module.scss";
+import { skillsGrouped } from "../../utils/data";
 import Aos from "aos";
 
 const MySkills = ({ skillRef }) => {
   useEffect(() => {
-    Aos.init({ duration: 1200 });
+    Aos.init({ duration: 1000 });
   }, []);
+
   return (
     <section className={styles.mySkillsContainer} ref={skillRef}>
-      <h2>My Skills</h2>
-      <div className={styles.mySkillsCardContainer}>
-        <div className={styles.frontend} data-aos="fade-right">
-          <h3>Frontend Development</h3>
-          <ul>
-            <li>
-              <i className="fa fa-check-circle"></i> HTML
-            </li>
-            <li>
-              <i className="fa fa-check-circle"></i> CSS / SASS
-            </li>
-            <li>
-              <i className="fa fa-check-circle"></i> JavaScript
-            </li>
-            <li>
-              <i className="fa fa-check-circle"></i> TypeScript
-            </li>
-            <li>
-              <i className="fa fa-check-circle"></i> React / Next JS
-            </li>
-            <li>
-              <i className="fa fa-check-circle"></i> React Native
-            </li>
-          </ul>
-        </div>
-        <div className={styles.backend} data-aos="fade-up">
-          <h3>Backend Development</h3>
-          <ul>
-            <li>
-              <i className="fa fa-check-circle"></i> Node JS
-            </li>
-            <li>
-              <i className="fa fa-check-circle"></i> MongoDB / Mongoose
-            </li>
-            <li>
-              <i className="fa fa-check-circle"></i> Express JS
-            </li>
-          </ul>
-        </div>
+      <h2>Core Technical Skills &amp; AI Tooling</h2>
+      <p className="sectionSubtitle">
+        Comprehensive expertise across modern web &amp; mobile frameworks, performance engineering, WordPress custom development, and AI tools.
+      </p>
+
+      <div className={styles.skillsGrid}>
+        {skillsGrouped.map((group, idx) => (
+          <div
+            key={group.category}
+            className={styles.skillBlock}
+            data-aos="fade-up"
+            data-aos-delay={idx * 100}
+          >
+            <div className={styles.blockHeader}>
+              <span className={styles.blockIcon}>{group.icon}</span>
+              <h3>{group.category}</h3>
+            </div>
+            <div className={styles.chipsRow}>
+              {group.items.map((skill) => (
+                <div key={skill.name} className={styles.skillChip}>
+                  <div className={styles.left}>
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={skill.icon}
+                      alt={skill.name}
+                      width={20}
+                      height={20}
+                      onError={(e) => {
+                        e.currentTarget.style.opacity = '0';
+                      }}
+                    />
+                    <span>{skill.name}</span>
+                  </div>
+                  <span className={styles.levelBadge}>{skill.level}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );

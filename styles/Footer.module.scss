@@ -1,44 +1,102 @@
-@import "../styles/variables.scss";
+@import "./variables.scss";
 
 .footerContainer {
-  background-image: url("/images/bk-art-alone.png");
-  height: 200px;
-  background: $secondary-dark;
-  margin-top: 3rem;
-  color: $primary;
-  h3 {
-    text-align: center;
-    padding: 2rem 0;
-  }
-  .links {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  background: rgba(10, 15, 25, 0.95);
+  border-top: 1px solid rgba(148, 93, 214, 0.2);
+  margin-top: 4rem;
 
-    li {
-      list-style: none;
-      padding: 0 0.7rem;
-      font-weight: 500;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      font-size: clamp(0.7rem, 3vw, 0.9rem);
+  .footerInner {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
 
-      &:hover {
-        color: $paragraph-color;
+    @media (min-width: 640px) {
+      grid-template-columns: 1.5fr 1fr 1fr;
+      align-items: start;
+    }
+
+    .brand {
+      h3 {
+        font-size: 1.2rem;
+        font-weight: 700;
+        background: $gradient-bg;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 0.6rem;
+      }
+
+      p {
+        font-size: 0.85rem;
+        color: rgba(255, 255, 255, 0.5);
+        line-height: 1.7;
+        max-width: 260px;
+      }
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+
+      li {
+        list-style: none;
+        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.6);
+        cursor: pointer;
+        transition: color 0.2s ease;
+        font-weight: 500;
+
+        &:hover {
+          color: $primary;
+        }
+      }
+    }
+
+    .socials {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      align-items: flex-start;
+
+      a {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 1px solid rgba(148, 93, 214, 0.3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgba(255, 255, 255, 0.7);
+        transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
+
+        &:hover {
+          border-color: $primary;
+          color: $primary;
+          background: rgba(19, 173, 199, 0.08);
+        }
+
+        i {
+          font-size: 1.1rem;
+        }
       }
     }
   }
-  .socials {
-    padding: 1rem 0;
+
+  .footerBottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
     text-align: center;
-    i {
-      font-size: 1.2rem;
-      padding: 0 0.5rem;
-      cursor: pointer;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.2rem 1.5rem;
+
+    p {
+      font-size: 0.8rem;
+      color: rgba(255, 255, 255, 0.3);
     }
-  }
-  p {
-    font-weight: 500;
-    text-align: center;
   }
 }

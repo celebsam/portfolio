@@ -1,38 +1,92 @@
-.mySkillsContainer {
-  background-image: url("/images/bk-art-alone.png");
-  background-position: top;
+@import "./variables";
 
-  .mySkillsCardContainer {
+.mySkillsContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+
+  .skillsGrid {
     display: grid;
-    grid-template-columns: 1fr;
-    @media (min-width: 960px) {
-      grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 1.75rem;
+  }
+
+  .skillBlock {
+    background: #131c31;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+    padding: 1.75rem;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-4px);
+      border-color: rgba(19, 173, 199, 0.35);
+      box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.6);
     }
-    gap: 2rem;
-    .frontend,
-    .backend {
-      background: #391d5a;
-      // background: #292952;
-      border-radius: 1rem;
-      padding: 3rem 1rem;
-      @media (min-width: 960px) {
-        padding: 5rem 4rem;
+
+    .blockHeader {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      padding-bottom: 1rem;
+
+      .blockIcon {
+        font-size: 1.5rem;
       }
+
       h3 {
-        text-align: center;
-        margin-bottom: 1.5rem;
+        font-size: 1.15rem;
+        font-weight: 700;
+        color: #ffffff;
       }
-      ul {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        li {
-          list-style: none;
-          padding: 1.2rem 0 0;
-          i {
-            margin-right: 0.3rem;
-            color: #13adc7;
-          }
+    }
+
+    .chipsRow {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .skillChip {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.65rem 0.9rem;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      transition: background 0.2s ease, border-color 0.2s ease;
+
+      &:hover {
+        background: rgba(19, 173, 199, 0.08);
+        border-color: rgba(19, 173, 199, 0.25);
+      }
+
+      .left {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+
+        img {
+          object-fit: contain;
         }
+
+        span {
+          font-size: 0.9rem;
+          font-weight: 600;
+          color: #f8fafc;
+        }
+      }
+
+      .levelBadge {
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: #38bdf8;
+        background: rgba(56, 189, 248, 0.1);
+        padding: 0.2rem 0.5rem;
+        border-radius: 6px;
       }
     }
   }
