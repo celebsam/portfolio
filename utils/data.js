@@ -113,29 +113,29 @@ export const projects = [
       metrics: ["Shipped to Google Play", "Location Autocomplete", "Offline Support"],
     },
   },
-  // {
-  //   id: 3,
-  //   title: "Sam Shop Platform",
-  //   subtitle: "Full-Stack MERN E-Commerce Storefront",
-  //   category: "web",
-  //   description:
-  //     "A full-stack e-commerce web application featuring user authentication via JWT, cart state management, product filtering, and a comprehensive admin dashboard for order processing.",
-  //   image: "/images/samshopss.PNG",
-  //   tags: ["React", "Node.js", "Express.js", "MongoDB", "JWT"],
-  //   source: "https://github.com/celebsam/mern-shopping-cart",
-  //   visit: "https://github.com/celebsam/mern-shopping-cart",
-  //   access: "public",
-  //   type: "website",
-  //   caseStudy: {
-  //     role: "Full Stack Engineer",
-  //     timeline: "2022",
-  //     problem:
-  //       "Building a reliable end-to-end e-commerce platform to demonstrate RESTful API integration, JWT session management, and admin state management.",
-  //     solution:
-  //       "Designed and implemented REST APIs with Express & MongoDB, paired with a React SPA featuring client-side routing, protected routes, and interactive cart controls.",
-  //     metrics: ["REST API Endpoints", "JWT Auth", "Admin Control Panel"],
-  //   },
-  // },
+  {
+    id: 3,
+    title: "Niishcloud Web Services",
+    subtitle: "Cloud Hosting & Domain Registration Platform",
+    category: "web",
+    description:
+      "Cloud web services platform enabling users to search, purchase domains, and manage high-performance hosting. Built with Next.js, TypeScript, Tailwind CSS, and Zustand for state management, featuring streamlined 48-hour live site deployments and managed WordPress hosting.",
+    image: "/images/niishcloud.png",
+    tags: ["Next.js", "TypeScript", "Tailwind CSS", "Zustand", "Cloud Hosting"],
+    source: "https://www.niishcloud.com",
+    visit: "https://www.niishcloud.com",
+    access: "private",
+    type: "website",
+    caseStudy: {
+      role: "Frontend Engineer",
+      timeline: "2024",
+      problem:
+        "Traditional domain and hosting purchase portals are often cumbersome. Niishcloud needed an intuitive, high-converting web platform to streamline domain registration and cloud hosting onboarding.",
+      solution:
+        "Architected a Next.js application using TypeScript, Tailwind CSS, and Zustand state management, delivering real-time domain search, responsive service tiers, and automated hosting workflows.",
+      metrics: ["Instant Domain Lookup", "48-Hour Concept-to-Live", "Zustand State Architecture"],
+    },
+  },
   {
     id: 4,
     title: "Cork-Dorx",
